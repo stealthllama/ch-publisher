@@ -6,6 +6,7 @@ import requests
 import yaml
 import urllib3
 import logging
+import logging.handlers
 
 INSTANCE = "docs.dragos.com"
 PUBFILE = "test.yaml"
