@@ -7,7 +7,7 @@ import yaml
 import urllib3
 
 INSTANCE = "docs.dragos.com"
-PUBFILE = "test.yaml"
+PUBFILE = "projects.yaml"
 
 def update_pub(instance, session, project_id, project_dict):
     # Format the payload
