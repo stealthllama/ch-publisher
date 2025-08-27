@@ -5,8 +5,6 @@ import time
 import requests
 import yaml
 import urllib3
-import logging
-import logging.handlers
 
 INSTANCE = "docs.dragos.com"
 PUBFILE = "test.yaml"
@@ -49,25 +47,12 @@ def wait_for_success(session, instance, task):
 
 
 def main():
-    # Set up the logger object
-    logger = logging.getLogger(__name__)
-    logger.setLevel(logging.DEBUG)
-    logger_file_handler = logging.handlers.RotatingFileHandler(
-        "publisher.log",
-        maxBytes=1024 * 1024,
-        backupCount=1,
-        encoding="utf8",
-    )
-    formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-    logger_file_handler.setFormatter(formatter)
-    logger.addHandler(logger_file_handler)
-    
     # Grab the API user and key secrets
     try:
         CLICKHELP_USER = os.environ["CLICKHELP_USER"]
         CLICKHELP_KEY = os.environ["CLICKHELP_KEY"]
     except KeyError:
-        logger.info("API credentials not available!")
+        print("API credentials not available!")
         raise
 
     # Initialize the Session object
@@ -89,9 +74,9 @@ def main():
             projects_dict[project]
         )
         # Check the status of the publishing task
-        logging.info(f"Updating {project} publication via task {task_id}")
+        print(f"Updating {project} publication via task {task_id}")
         wait_for_success(session, INSTANCE, task_id)
-        logging.info(f"Publishing task {task_id} completed")
+        print(f"Publishing task {task_id} completed")
 
 
 if __name__ == "__main__":
