@@ -1,8 +1,0 @@
-knowledge-base:
-  publication: dragos-platform-knowledge-base
-  title: Knowledge Base
-  update: Partial
-  visibility: Restricted
-  output_tags:
-    - OnlineDoc
-    - Platform_3.0

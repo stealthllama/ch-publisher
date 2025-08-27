@@ -1,0 +1,64 @@
+release-notes:
+  publication: dragos-platform-release-notes
+  title: Release Notes
+  update: Partial
+  visibility: Restricted
+  output_tags:
+    - OnlineDoc
+    - Platform_3.0
+admin-guide:
+  publication: dragos-platform-administrator-guide
+  title: Administrator Guide
+  update: Partial
+  visibility: Restricted
+  output_tags:
+    - OnlineDoc
+    - Platform_3.0
+knowledge-base:
+  publication: dragos-platform-knowledge-base
+  title: Knowledge Base
+  update: Partial
+  visibility: Restricted
+  output_tags:
+    - OnlineDoc
+    - Platform_3.0
+developer-guide:
+  publication: dragos-platform-developer-guide
+  title: Developer Guide
+  update: Partial
+  visibility: Restricted
+  output_tags:
+    - OnlineDoc
+    - Platform_3.0
+deployment-guide:
+  publication: dragos-platform-deployment-guide
+  title: Deployment Guide
+  update: Partial
+  visibility: Restricted
+  output_tags:
+    - OnlineDoc
+    - Platform_3.0
+support-guide:
+  publication: dragos-platform-support-guide
+  title: Support Guide
+  update: Partial
+  visibility: Restricted
+  output_tags:
+    - OnlineDoc
+    - Platform_3.0
+user-guide:
+  publication: dragos-platform-user-guide
+  title: User Guide
+  update: Partial
+  visibility: Restricted
+  output_tags:
+    - OnlineDoc
+    - Platform_3.0
+integration-guide:
+  publication: dragos-platform-integration-guide
+  title: Integration Guide
+  update: Partial
+  visibility: Restricted
+  output_tags:
+    - OnlineDoc
+    - Platform_3.0
