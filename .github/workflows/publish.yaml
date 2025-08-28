@@ -1,4 +1,4 @@
-name: run main.py
+name: run publisher.py
 
 on:
   # workflow_dispatch:
@@ -29,5 +29,5 @@ jobs:
         env:
           CLICKHELP_USER: ${{ secrets.CLICKHELP_USER }}
           CLICKHELP_KEY: ${{ secrets.CLICKHELP_KEY }}
-        run: python main.py
+        run: python publisher.py
         
