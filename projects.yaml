@@ -6,6 +6,8 @@ release-notes:
   output_tags:
     - OnlineDoc
     - Platform_3.0
+    - Platform_3.0.1
+    - Platform_3.0.2
 admin-guide:
   publication: dragos-platform-administrator-guide
   title: Administrator Guide
