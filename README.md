@@ -6,8 +6,8 @@ The `publications.yaml` file contains details of the publications that will be p
 
 For example:
 ```yaml
-release-notes:
-  publication: dragos-platform-release-notes
+dragos-platform-release-notes:
+  project: release-notes
   title: Release Notes
   update: Partial
   visibility: Restricted
