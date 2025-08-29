@@ -7,7 +7,7 @@ import yaml
 import urllib3
 
 INSTANCE = "docs.dragos.com"
-PUBFILE = "test.yaml"
+PUBFILE = "publications.yaml"
 
 def update_pub(instance, session, pub_id, pub_dict):
     # Format the payload
@@ -49,7 +49,7 @@ def wait_for_success(session, instance, task):
             response.raise_for_status()
     # This should only be reached if the task checks time out
     print(f"Task {task} timed out after {i} seconds")
-    return
+    return(i)
 
 
 def main():
@@ -81,8 +81,8 @@ def main():
         )
         # Check the status of the publishing task
         print(f"Updating {pub} publication via task {task_id}")
-        wait_for_success(session, INSTANCE, task_id)
-        print(f"Publishing task {task_id} completed")
+        timer = wait_for_success(session, INSTANCE, task_id)
+        print(f"Publishing task {task_id} completed after {timer} seconds")
 
 
 if __name__ == "__main__":
