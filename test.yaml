@@ -1,0 +1,10 @@
+release-notes:
+  publication: dragos-platform-release-notes
+  title: Release Notes
+  update: Partial
+  visibility: Restricted
+  output_tags:
+    - OnlineDoc
+    - Platform_3.0
+    - Platform_3.0.1
+    - Platform_3.0.2
