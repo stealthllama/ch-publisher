@@ -2,13 +2,11 @@ name: run publisher.py
 
 on:
   workflow_dispatch:
-  # schedule:
-  #   - cron: '0 3 * * *' # At 03:00 every day
+  schedule:
+    - cron: '0 3 * * *' # At 03:00 every day
 
 jobs:
   build:
-    permissions:
-      contents: write
     runs-on: ubuntu-latest
     steps:
 
@@ -25,7 +23,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
-      - name: execute py script # run main.py
+      - name: execute py script # run publisher.py
         env:
           CLICKHELP_USER: ${{ secrets.CLICKHELP_USER }}
           CLICKHELP_KEY: ${{ secrets.CLICKHELP_KEY }}

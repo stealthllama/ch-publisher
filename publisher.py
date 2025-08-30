@@ -40,7 +40,7 @@ def export_pub(instance, session, pub_id, pub_dict):
     }
     # Send the API call
     response = session.post(
-        url = "https://" + instance + "/api/v1/projects/" + pub_dict['project'] + "?action=export",
+        url = "https://" + instance + "/api/v1/projects/" + pub_id + "?action=export",
         json = payload
     )
     if response.ok:
