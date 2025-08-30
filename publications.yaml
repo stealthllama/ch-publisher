@@ -3,16 +3,18 @@ dragos-platform-release-notes:
   title: Release Notes
   update: Partial
   visibility: Restricted
+  export: False
   output_tags:
     - OnlineDoc
     - Platform_3.0
     - Platform_3.0.1
     - Platform_3.0.2
 dragos-platform-administrator-guide:
-  project: adminis-guide
+  project: admin-guide
   title: Administrator Guide
   update: Partial
   visibility: Restricted
+  export: False
   output_tags:
     - OnlineDoc
     - Platform_3.0
@@ -21,6 +23,7 @@ dragos-platform-knowledge-base:
   title: Knowledge Base
   update: Partial
   visibility: Restricted
+  export: False
   output_tags:
     - OnlineDoc
     - Platform_3.0
@@ -29,6 +32,7 @@ dragos-platform-developer-guide:
   title: Developer Guide
   update: Partial
   visibility: Restricted
+  export: False
   output_tags:
     - OnlineDoc
     - Platform_3.0
@@ -37,6 +41,7 @@ dragos-platform-deployment-guide:
   title: Deployment Guide
   update: Partial
   visibility: Restricted
+  export: True
   output_tags:
     - OnlineDoc
     - Platform_3.0
@@ -45,6 +50,7 @@ dragos-platform-support-guide:
   title: Support Guide
   update: Partial
   visibility: Restricted
+  export: False
   output_tags:
     - OnlineDoc
     - Platform_3.0
@@ -53,6 +59,7 @@ dragos-platform-user-guide:
   title: User Guide
   update: Partial
   visibility: Restricted
+  export: False
   output_tags:
     - OnlineDoc
     - Platform_3.0
@@ -61,6 +68,7 @@ dragos-platform-integration-guide:
   title: Integration Guide
   update: Partial
   visibility: Restricted
+  export: False
   output_tags:
     - OnlineDoc
     - Platform_3.0
