@@ -35,7 +35,7 @@ def export_pub(instance, session, pub_id, pub_dict):
     # Format the payload
     payload = {
         'format': 'Pdf',
-        'outputFileName': "Storage/" + pub_id + '.pdf',
+        'outputFileName': "Storage/Exported/" + pub_id + '.pdf',
         'exportPresetName': 'Default'
     }
     # Send the API call
