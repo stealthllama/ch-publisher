@@ -24,7 +24,7 @@ def update_pub(instance, session, pub_id, pub_dict, export=False):
         payload['pubVisibility'] = "Private"
         if 'OnlineDoc' in payload['outputTags']:
             payload['outputTags'].remove('OnlineDoc')
-            payload['outputTags'].add('PrintedDoc')
+            payload['outputTags'].append('PrintedDoc')
     # Send the API call
     response = session.post(
         url = "https://" + instance + "/api/v1/projects/" + pub_dict['project'] + "?action=publish",
