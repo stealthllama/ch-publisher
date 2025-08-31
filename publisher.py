@@ -9,7 +9,7 @@ import urllib3
 INSTANCE = "docs.dragos.com"
 PUBFILE = "publications.yaml"
 
-def update_pub(instance, session, pub_id, pub_dict):
+def update_pub(instance, session, pub_id, pub_dict, export=False):
     # Format the payload
     payload = {
         'updatedPubId': pub_id,
@@ -19,6 +19,12 @@ def update_pub(instance, session, pub_id, pub_dict):
         'pubVisibility': pub_dict['visibility'],
         'outputTags': pub_dict['output_tags']
     }
+    # Update fields for exports
+    if export is True:
+        payload['pubVisibility'] = "Private"
+        if 'OnlineDoc' in payload['outputTags']:
+            payload['outputTags'].remove('OnlineDoc')
+            payload['outputTags'].add('PrintedDoc')
     # Send the API call
     response = session.post(
         url = "https://" + instance + "/api/v1/projects/" + pub_dict['project'] + "?action=publish",
@@ -106,14 +112,28 @@ def main():
     # Export each of the publications
     for exp in pub_list:
         if pub_dict[exp]['export'] is True:
+            # Publish a publication version for export
+            task_id = update_pub(
+                INSTANCE,
+                session,
+                exp + "-export",
+                pub_dict[exp],
+                export=True
+            )
+            # Check the status of the publishing task
+            print(f"Publishing {exp}-export via task {task_id}")
+            timer = wait_for_success(session, INSTANCE, task_id)
+            print(f"Publishing task {task_id} completed after {timer} seconds")
+            
+            # Export from the newly published publication
             task_id = export_pub(
                 INSTANCE,
                 session,
-                exp,
+                exp + "-export",
                 pub_dict[exp]
             )
             # Check the status of the export task
-            print(f"Exporting {exp} via task {task_id}")
+            print(f"Exporting {exp}-export via task {task_id}")
             timer = wait_for_success(session, INSTANCE, task_id)
             print(f"Export task {task_id} completed after {timer} seconds")
 
