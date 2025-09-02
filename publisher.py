@@ -21,6 +21,7 @@ def update_pub(instance, session, pub_id, pub_dict, export=False):
     }
     # Update fields for exports
     if export is True:
+        payload['pubName'] = payload['pubName'] + " (Export)"
         payload['pubVisibility'] = "Private"
         if 'OnlineDoc' in payload['outputTags']:
             payload['outputTags'].remove('OnlineDoc')
@@ -30,6 +31,8 @@ def update_pub(instance, session, pub_id, pub_dict, export=False):
         url = "https://" + instance + "/api/v1/projects/" + pub_dict['project'] + "?action=publish",
         json = payload
     )
+    print(response.status_code)
+    print(response.json())
     if response.ok:
         task_key = response.json()['taskKey']
         return(task_key)
