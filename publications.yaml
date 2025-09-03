@@ -1,3 +1,4 @@
+---
 dragos-platform-release-notes:
   project: release-notes
   title: Release Notes
@@ -6,6 +7,17 @@ dragos-platform-release-notes:
   export: False
   output_tags:
     - OnlineDoc
+    - Platform_3.0
+    - Platform_3.0.1
+    - Platform_3.0.2
+dragos-platform-release-notes-export:
+  project: release-notes
+  title: Dragos Platform Release Notes
+  update: Partial
+  visibility: Private
+  export: True
+  output_tags:
+    - PrintedDoc
     - Platform_3.0
     - Platform_3.0.1
     - Platform_3.0.2
@@ -18,6 +30,15 @@ dragos-platform-administrator-guide:
   output_tags:
     - OnlineDoc
     - Platform_3.0
+dragos-platform-administrator-guide-export:
+  project: admin-guide
+  title: Dragos Platform Administrator Guide
+  update: Partial
+  visibility: Private
+  export: True
+  output_tags:
+    - PrintedDoc
+    - Platform_3.0
 dragos-platform-knowledge-base:
   project: knowledge-base
   title: Knowledge Base
@@ -26,6 +47,15 @@ dragos-platform-knowledge-base:
   export: False
   output_tags:
     - OnlineDoc
+    - Platform_3.0
+dragos-platform-knowledge-base-export:
+  project: knowledge-base
+  title: Dragos Platform Knowledge Base
+  update: Partial
+  visibility: Private
+  export: True
+  output_tags:
+    - PrintedDoc
     - Platform_3.0
 dragos-platform-developer-guide:
   project: developer-guide
@@ -36,14 +66,32 @@ dragos-platform-developer-guide:
   output_tags:
     - OnlineDoc
     - Platform_3.0
+dragos-platform-developer-guide-export:
+  project: developer-guide
+  title: Dragos Platform Developer Guide
+  update: Partial
+  visibility: Private
+  export: True
+  output_tags:
+    - PrintedDoc
+    - Platform_3.0
 dragos-platform-deployment-guide:
   project: deployment-guide
   title: Deployment Guide
   update: Partial
   visibility: Restricted
-  export: True
+  export: False
   output_tags:
     - OnlineDoc
+    - Platform_3.0
+dragos-platform-deployment-guide-export:
+  project: deployment-guide
+  title: Dragos Platform Deployment Guide
+  update: Partial
+  visibility: Private
+  export: True
+  output_tags:
+    - PrintedDoc
     - Platform_3.0
 dragos-platform-support-guide:
   project: support-guide
@@ -54,6 +102,15 @@ dragos-platform-support-guide:
   output_tags:
     - OnlineDoc
     - Platform_3.0
+dragos-platform-support-guide-export:
+  project: support-guide
+  title: Dragos Platform Support Guide
+  update: Partial
+  visibility: Private
+  export: True
+  output_tags:
+    - PrintedDoc
+    - Platform_3.0
 dragos-platform-user-guide:
   project: user-guide
   title: User Guide
@@ -63,6 +120,15 @@ dragos-platform-user-guide:
   output_tags:
     - OnlineDoc
     - Platform_3.0
+dragos-platform-user-guide-export:
+  project: user-guide
+  title: Dragos Platform User Guide
+  update: Partial
+  visibility: Private
+  export: True
+  output_tags:
+    - PrintedDoc
+    - Platform_3.0
 dragos-platform-integration-guide:
   project: integration-guide
   title: Integration Guide
@@ -71,4 +137,13 @@ dragos-platform-integration-guide:
   export: False
   output_tags:
     - OnlineDoc
+    - Platform_3.0
+dragos-platform-integration-guide-export:
+  project: integration-guide
+  title: Dragos Platform Integration Guide
+  update: Partial
+  visibility: Private
+  export: True
+  output_tags:
+    - PrintedDoc
     - Platform_3.0
