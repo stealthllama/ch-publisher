@@ -1,5 +1,5 @@
-# ch-publisher
-This GitHub Action runs a scheduled job that publishes updates to publications on a ClickHelp documentation portal.
+# clickhelper
+This GitHub Action runs a scheduled job that performs various actions on publications that are hosted on a ClickHelp documentation portal.
 
 ### Configuration
 The `publications.yaml` file contains details of the publications that will be published.
